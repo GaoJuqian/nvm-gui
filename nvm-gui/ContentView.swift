@@ -25,35 +25,12 @@ struct ContentView: View {
             .padding()
             .onAppear {
                 print(shell("-l", "-c", "echo $HOME; nvm list"))
+
                 // /Users/gjq/Library/Containers/com.gaojuqian.nvm-gui/Data
                 // zsh:1: command not found: nvm
             }
     }
 }
-
-
-
-
-
-
-
-
-//struct ContentView: View {
-//    let test = 213
-//    @State private var abc:String?
-//
-//
-//    var body: some View {
-//        VStack {
-//            Text(abc ?? "")
-//            Button("Button") {
-//
-//                abc = NvmControl.test()
-//            }
-//        }
-//        .padding()
-//    }
-//}
 
 struct ContentView_Previews: PreviewProvider {
     
