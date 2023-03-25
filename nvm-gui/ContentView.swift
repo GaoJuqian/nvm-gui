@@ -6,20 +6,29 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct ContentView: View {
-    @State private var out:String?
+    @State private var list:Array<String>?
     
     
     
     var body: some View {
-        Text(out ?? "null")
-            .padding()
-            .onAppear {
-                Nvm.ls(true)
+        VStack {
+//            Button {
+//
+//            } label: {
+//                Text("ads")
+//            }.buttonStyle(.borderedProminent)
 
-            }
+            List {
+                    Text("A Second List Item")
+                    Text("A Third List Item")
+                }
+        }
+        .frame(width: .infinity, height: .infinity)
+        .background(Color(.gray))
+        .padding()
+        .animation(.easeInOut, value: list)
     }
 }
 
