@@ -65,13 +65,13 @@ struct Nvm{
     static func getCurrent() -> String{
         shell("-l", "-c", "nvm current")
     }
-    static func use(){
-        
+    static func use(version:String){
+        shell("-l", "-c", "nvm use \(version)")
     }
-    static func install(){
-        
+    static func install(version:String){
+        shell("-l", "-c", "nvm install \(version)")
     }
-    static func uninstall(){
-        
+    static func uninstall(version:String){
+        shell("-l", "-c", "nvm uninstall \(version)")
     }
 }
